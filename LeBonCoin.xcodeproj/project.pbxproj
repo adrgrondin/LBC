@@ -15,6 +15,9 @@
 		04B7B35B28196D2E0080AABD /* ClassifiedAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B35A28196D2E0080AABD /* ClassifiedAdsViewController.swift */; };
 		04B7B35D28196E830080AABD /* ClassifiedAdsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B35C28196E830080AABD /* ClassifiedAdsPresenter.swift */; };
 		04B7B360281973550080AABD /* ClassifiedAdsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B35F281973550080AABD /* ClassifiedAdsCoordinator.swift */; };
+		04B7B363281981550080AABD /* ClassifiedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B362281981550080AABD /* ClassifiedAd.swift */; };
+		04B7B365281981C90080AABD /* ImagesURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B364281981C90080AABD /* ImagesURL.swift */; };
+		04B7B367281982860080AABD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B366281982860080AABD /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		04B7B35A28196D2E0080AABD /* ClassifiedAdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsViewController.swift; sourceTree = "<group>"; };
 		04B7B35C28196E830080AABD /* ClassifiedAdsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsPresenter.swift; sourceTree = "<group>"; };
 		04B7B35F281973550080AABD /* ClassifiedAdsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsCoordinator.swift; sourceTree = "<group>"; };
+		04B7B362281981550080AABD /* ClassifiedAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAd.swift; sourceTree = "<group>"; };
+		04B7B364281981C90080AABD /* ImagesURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesURL.swift; sourceTree = "<group>"; };
+		04B7B366281982860080AABD /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 		04B7B35328196A100080AABD /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				04B7B361281981470080AABD /* Models */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -127,6 +134,16 @@
 				04B7B35F281973550080AABD /* ClassifiedAdsCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		04B7B361281981470080AABD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04B7B362281981550080AABD /* ClassifiedAd.swift */,
+				04B7B364281981C90080AABD /* ImagesURL.swift */,
+				04B7B366281982860080AABD /* Category.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +217,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B7B33F281968D60080AABD /* AppDelegate.swift in Sources */,
+				04B7B363281981550080AABD /* ClassifiedAd.swift in Sources */,
 				04B7B35828196B890080AABD /* CoordinatorProtocol.swift in Sources */,
+				04B7B365281981C90080AABD /* ImagesURL.swift in Sources */,
 				04B7B341281968D60080AABD /* SceneDelegate.swift in Sources */,
+				04B7B367281982860080AABD /* Category.swift in Sources */,
 				04B7B360281973550080AABD /* ClassifiedAdsCoordinator.swift in Sources */,
 				04B7B35D28196E830080AABD /* ClassifiedAdsPresenter.swift in Sources */,
 				04B7B35B28196D2E0080AABD /* ClassifiedAdsViewController.swift in Sources */,
