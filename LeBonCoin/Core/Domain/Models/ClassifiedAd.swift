@@ -10,7 +10,7 @@ import Foundation
 struct ClassifiedAd: Codable {
     let id, categoryID: Int
     let title, listingDescription: String
-    let price: Int
+    let price: Double
     let imagesURL: ImagesURL
     let creationDate: Date
     let isUrgent: Bool
