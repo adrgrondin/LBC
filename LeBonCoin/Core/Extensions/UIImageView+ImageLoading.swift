@@ -16,7 +16,11 @@ extension UIImageView {
         Task {
             let (data, _) = try await URLSession.shared.data(for: urlrequest)
 
-            image = UIImage(data: data) ?? placeholder
+            if #available(iOS 15.0, *) {
+                image = await UIImage(data: data)?.byPreparingForDisplay() ?? placeholder
+            } else {
+                image = UIImage(data: data) ?? placeholder
+            }
         }
     }
 }

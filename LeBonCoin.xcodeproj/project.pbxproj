@@ -30,6 +30,11 @@
 		04B7B38A281ABF550080AABD /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B389281ABF550080AABD /* APIManagerMock.swift */; };
 		04B7B38C281AC20E0080AABD /* ListingRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B38B281AC20E0080AABD /* ListingRequestMock.swift */; };
 		04B7B38F281AC54C0080AABD /* Listing.json in Resources */ = {isa = PBXBuildFile; fileRef = 04B7B38E281AC54C0080AABD /* Listing.json */; };
+		04B7B391281ACF1C0080AABD /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B390281ACF1C0080AABD /* FetchService.swift */; };
+		04B7B394281ADD6A0080AABD /* ClassifiedAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B393281ADD6A0080AABD /* ClassifiedAdCell.swift */; };
+		04B7B397281ADDDE0080AABD /* ClassifiedAdContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B396281ADDDE0080AABD /* ClassifiedAdContentConfiguration.swift */; };
+		04B7B39A281AF9690080AABD /* ClassifiedAdContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B399281AF9690080AABD /* ClassifiedAdContentView.swift */; };
+		04B7B39D281C2F470080AABD /* UIImageView+ImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B39C281C2F470080AABD /* UIImageView+ImageLoading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,11 @@
 		04B7B389281ABF550080AABD /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
 		04B7B38B281AC20E0080AABD /* ListingRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingRequestMock.swift; sourceTree = "<group>"; };
 		04B7B38E281AC54C0080AABD /* Listing.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Listing.json; sourceTree = "<group>"; };
+		04B7B390281ACF1C0080AABD /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
+		04B7B393281ADD6A0080AABD /* ClassifiedAdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdCell.swift; sourceTree = "<group>"; };
+		04B7B396281ADDDE0080AABD /* ClassifiedAdContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdContentConfiguration.swift; sourceTree = "<group>"; };
+		04B7B399281AF9690080AABD /* ClassifiedAdContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdContentView.swift; sourceTree = "<group>"; };
+		04B7B39C281C2F470080AABD /* UIImageView+ImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoading.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +138,7 @@
 				04B7B35328196A100080AABD /* Domain */,
 				04B7B35428196A160080AABD /* Data */,
 				04B7B35628196A6B0080AABD /* Protocols */,
+				04B7B39B281C2EE30080AABD /* Extensions */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -168,6 +179,10 @@
 		04B7B35928196C050080AABD /* ClassifiedAds */ = {
 			isa = PBXGroup;
 			children = (
+				04B7B39E281C5EDB0080AABD /* Services */,
+				04B7B398281AF9290080AABD /* ContentViews */,
+				04B7B395281ADD8A0080AABD /* ContentConfigurations */,
+				04B7B392281AD8F00080AABD /* Cells */,
 				04B7B35A28196D2E0080AABD /* ClassifiedAdsViewController.swift */,
 				04B7B35C28196E830080AABD /* ClassifiedAdsPresenter.swift */,
 			);
@@ -247,6 +262,46 @@
 				04B7B38E281AC54C0080AABD /* Listing.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		04B7B392281AD8F00080AABD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04B7B393281ADD6A0080AABD /* ClassifiedAdCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		04B7B395281ADD8A0080AABD /* ContentConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				04B7B396281ADDDE0080AABD /* ClassifiedAdContentConfiguration.swift */,
+			);
+			path = ContentConfigurations;
+			sourceTree = "<group>";
+		};
+		04B7B398281AF9290080AABD /* ContentViews */ = {
+			isa = PBXGroup;
+			children = (
+				04B7B399281AF9690080AABD /* ClassifiedAdContentView.swift */,
+			);
+			path = ContentViews;
+			sourceTree = "<group>";
+		};
+		04B7B39B281C2EE30080AABD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04B7B39C281C2F470080AABD /* UIImageView+ImageLoading.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04B7B39E281C5EDB0080AABD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				04B7B390281ACF1C0080AABD /* FetchService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,13 +415,18 @@
 				04B7B3722819DD620080AABD /* APIManager.swift in Sources */,
 				04B7B3752819DE760080AABD /* URLSession+Async.swift in Sources */,
 				04B7B367281982860080AABD /* Category.swift in Sources */,
+				04B7B394281ADD6A0080AABD /* ClassifiedAdCell.swift in Sources */,
 				04B7B360281973550080AABD /* ClassifiedAdsCoordinator.swift in Sources */,
+				04B7B397281ADDDE0080AABD /* ClassifiedAdContentConfiguration.swift in Sources */,
 				04B7B35D28196E830080AABD /* ClassifiedAdsPresenter.swift in Sources */,
 				04B7B36E2819DCA50080AABD /* APIConstants.swift in Sources */,
+				04B7B391281ACF1C0080AABD /* FetchService.swift in Sources */,
 				04B7B35B28196D2E0080AABD /* ClassifiedAdsViewController.swift in Sources */,
 				04B7B36C2819DC5B0080AABD /* NetworkError.swift in Sources */,
+				04B7B39A281AF9690080AABD /* ClassifiedAdContentView.swift in Sources */,
 				04B7B37A2819E60D0080AABD /* CategoriesRequest.swift in Sources */,
 				04B7B36A2819DBC30080AABD /* RequestProtocol.swift in Sources */,
+				04B7B39D281C2F470080AABD /* UIImageView+ImageLoading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,4 +29,14 @@ struct ClassifiedAd: Codable {
     }
 }
 
+extension ClassifiedAd: Hashable {
+    static func == (lhs: ClassifiedAd, rhs: ClassifiedAd) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
 typealias Listing = [ClassifiedAd]

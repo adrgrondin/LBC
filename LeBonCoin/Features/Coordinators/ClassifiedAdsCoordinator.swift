@@ -18,7 +18,7 @@ final class ClassifiedAdsCoordinator: Coordinator {
     }
 
     func start() {
-        let presenter = ClassifiedAdsPresenter()
+        let presenter = ClassifiedAdsPresenter(fetchService: FetchService(apiManager: APIManager()))
         presenter.coordinator = self
         
         let viewController = ClassifiedAdsViewController(presenter: presenter)
