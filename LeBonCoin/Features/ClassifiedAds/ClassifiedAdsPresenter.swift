@@ -63,6 +63,7 @@ final class ClassifiedAdsPresenter {
     @MainActor
     private func updateDataSource() {
         listing.sort(by: { $0.creationDate > $1.creationDate })
+        listing.sort(by: { $0.isUrgent && !$1.isUrgent })
         view?.updateDataSource(with: listing, categories: categories, animatingDifferences: false)
     }
 }

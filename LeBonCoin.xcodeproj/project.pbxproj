@@ -35,6 +35,7 @@
 		04B7B397281ADDDE0080AABD /* ClassifiedAdContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B396281ADDDE0080AABD /* ClassifiedAdContentConfiguration.swift */; };
 		04B7B39A281AF9690080AABD /* ClassifiedAdContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B399281AF9690080AABD /* ClassifiedAdContentView.swift */; };
 		04B7B39D281C2F470080AABD /* UIImageView+ImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B39C281C2F470080AABD /* UIImageView+ImageLoading.swift */; };
+		04B7B3A0281D7F1F0080AABD /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B39F281D7F1F0080AABD /* TagView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		04B7B396281ADDDE0080AABD /* ClassifiedAdContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdContentConfiguration.swift; sourceTree = "<group>"; };
 		04B7B399281AF9690080AABD /* ClassifiedAdContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdContentView.swift; sourceTree = "<group>"; };
 		04B7B39C281C2F470080AABD /* UIImageView+ImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoading.swift"; sourceTree = "<group>"; };
+		04B7B39F281D7F1F0080AABD /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				04B7B392281AD8F00080AABD /* Cells */,
 				04B7B35A28196D2E0080AABD /* ClassifiedAdsViewController.swift */,
 				04B7B35C28196E830080AABD /* ClassifiedAdsPresenter.swift */,
+				04B7B39F281D7F1F0080AABD /* TagView.swift */,
 			);
 			path = ClassifiedAds;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				04B7B365281981C90080AABD /* ImagesURL.swift in Sources */,
 				04B7B341281968D60080AABD /* SceneDelegate.swift in Sources */,
 				04B7B3722819DD620080AABD /* APIManager.swift in Sources */,
+				04B7B3A0281D7F1F0080AABD /* TagView.swift in Sources */,
 				04B7B3752819DE760080AABD /* URLSession+Async.swift in Sources */,
 				04B7B367281982860080AABD /* Category.swift in Sources */,
 				04B7B394281ADD6A0080AABD /* ClassifiedAdCell.swift in Sources */,

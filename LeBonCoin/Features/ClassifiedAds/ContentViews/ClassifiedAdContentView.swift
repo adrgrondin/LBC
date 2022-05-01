@@ -31,6 +31,8 @@ final class ClassifiedAdContentView: UIView, UIContentView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 2
+        label.font = .boldSystemFont(ofSize: 18)
 
         return label
     }()
@@ -38,6 +40,7 @@ final class ClassifiedAdContentView: UIView, UIContentView {
     private let priceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .boldSystemFont(ofSize: 14)
 
         return label
     }()
@@ -45,15 +48,19 @@ final class ClassifiedAdContentView: UIView, UIContentView {
     private let categoryLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 13)
+        label.textColor = .darkGray
 
         return label
     }()
 
-    private let isUrgentLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
+    private let isUrgentTag: TagView = {
+        let tagView = TagView()
+        tagView.text = "Urgent"
+        tagView.color = .orange
+        tagView.translatesAutoresizingMaskIntoConstraints = false
 
-        return label
+        return tagView
     }()
 
     init(configuration: ClassifiedAdContentConfiguration) {
@@ -69,16 +76,21 @@ final class ClassifiedAdContentView: UIView, UIContentView {
 
     private func setupInternalViews() {
         addSubview(imageView)
+        addSubview(isUrgentTag)
         addSubview(titleLabel)
         addSubview(priceLabel)
         addSubview(categoryLabel)
 
-        // TODO: Add isUrgent label
-
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor, constant: 5),
             imageView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor, constant: 5),
-            imageView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -5)
+            imageView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -5),
+            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: 0.80)
+        ])
+
+        NSLayoutConstraint.activate([
+            isUrgentTag.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 5),
+            isUrgentTag.leadingAnchor.constraint(equalTo: imageView.leadingAnchor, constant: 5)
         ])
 
         NSLayoutConstraint.activate([
@@ -110,11 +122,12 @@ final class ClassifiedAdContentView: UIView, UIContentView {
             imageView.load(url: url, placeholder: UIImage(named: "placeholder"))
         }
 
-        categoryLabel.text = configuration.category
+        titleLabel.text = configuration.title
 
         // TODO: Do correct currency formatting
-
         priceLabel.text = "\(configuration.price ?? 0) €"
-        titleLabel.text = configuration.title
+
+        categoryLabel.text = configuration.category
+        isUrgentTag.isHidden = !(configuration.isUrgent ?? true) 
     }
 }
