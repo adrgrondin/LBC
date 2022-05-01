@@ -123,10 +123,7 @@ final class ClassifiedAdContentView: UIView, UIContentView {
         }
 
         titleLabel.text = configuration.title
-
-        // TODO: Do correct currency formatting
-        priceLabel.text = "\(configuration.price ?? 0) €"
-
+        priceLabel.text = configuration.price?.formattedCurrency
         categoryLabel.text = configuration.category
         isUrgentTag.isHidden = !(configuration.isUrgent ?? true) 
     }

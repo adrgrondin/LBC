@@ -36,6 +36,7 @@
 		04B7B39A281AF9690080AABD /* ClassifiedAdContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B399281AF9690080AABD /* ClassifiedAdContentView.swift */; };
 		04B7B39D281C2F470080AABD /* UIImageView+ImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B39C281C2F470080AABD /* UIImageView+ImageLoading.swift */; };
 		04B7B3A0281D7F1F0080AABD /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B39F281D7F1F0080AABD /* TagView.swift */; };
+		04DCD249281F2FAB00684519 /* Double+CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD248281F2FAB00684519 /* Double+CurrencyFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		04B7B399281AF9690080AABD /* ClassifiedAdContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdContentView.swift; sourceTree = "<group>"; };
 		04B7B39C281C2F470080AABD /* UIImageView+ImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoading.swift"; sourceTree = "<group>"; };
 		04B7B39F281D7F1F0080AABD /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		04DCD248281F2FAB00684519 /* Double+CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+CurrencyFormatter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				04B7B39C281C2F470080AABD /* UIImageView+ImageLoading.swift */,
+				04DCD248281F2FAB00684519 /* Double+CurrencyFormatter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				04B7B39A281AF9690080AABD /* ClassifiedAdContentView.swift in Sources */,
 				04B7B37A2819E60D0080AABD /* CategoriesRequest.swift in Sources */,
 				04B7B36A2819DBC30080AABD /* RequestProtocol.swift in Sources */,
+				04DCD249281F2FAB00684519 /* Double+CurrencyFormatter.swift in Sources */,
 				04B7B39D281C2F470080AABD /* UIImageView+ImageLoading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
