@@ -29,6 +29,21 @@ final class ClassifiedAdsViewController: UIViewController {
 
     private var categories: Categories = []
 
+    var menuItems: [UIAction] {
+        return [
+            UIAction(title: "Standard item", image: UIImage(systemName: "checkmark"), handler: { (_) in
+            }),
+            UIAction(title: "Disabled item", image: UIImage(systemName: "moon"), attributes: .disabled, handler: { (_) in
+            }),
+            UIAction(title: "Delete..", image: UIImage(systemName: "trash"), attributes: .destructive, handler: { (_) in
+            })
+        ]
+    }
+
+    var demoMenu: UIMenu {
+        return UIMenu(title: "Categories", image: nil, identifier: nil, options: [], children: menuItems)
+    }
+
     // MARK: Initialization
 
     init(presenter: ClassifiedAdsPresenter) {
@@ -50,7 +65,6 @@ final class ClassifiedAdsViewController: UIViewController {
         configureDataSource()
 
         presenter.attach(view: self)
-
     }
 
     // MARK: Functions
@@ -76,6 +90,7 @@ final class ClassifiedAdsViewController: UIViewController {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCollectionViewLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .systemBackground
+        collectionView.delegate = self
         view.addSubview(collectionView)
     }
 
@@ -94,6 +109,31 @@ final class ClassifiedAdsViewController: UIViewController {
         }
 
         applySnapshot(animatingDifferences: false)
+    }
+
+    private func configureMenu() {
+        var actions: [UIAction] = []
+
+        for category in categories {
+            let action = UIAction(title: category.name, image: nil) { [weak self] _ in
+                self?.presenter.didSelectCategory(category)
+            }
+
+            actions.append(action)
+        }
+
+        let clearAction = UIAction(title: "Réinitialiser",
+                                   image: UIImage(systemName: "minus.circle"),
+                                   attributes: .destructive,
+                                   handler: { [weak self] _ in
+            self?.presenter.resetCategory()
+        })
+
+        actions.append(clearAction)
+
+        let menu = UIMenu(title: "Catégories", children: actions)
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "list.bullet"), menu: menu)
     }
 
     private func applySnapshot(animatingDifferences: Bool) {
@@ -116,6 +156,14 @@ extension ClassifiedAdsViewController: ClassifiedAdsViewProtocol {
         self.categories = categories
         self.listing = listing
 
+        configureMenu()
         applySnapshot(animatingDifferences: animatingDifferences)
     }
 }
+
+// MARK: - UICollectionViewDelegate
+
+extension ClassifiedAdsViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) { }
+}
+

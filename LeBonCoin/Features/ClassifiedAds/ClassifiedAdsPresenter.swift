@@ -9,6 +9,8 @@ import Foundation
 
 protocol ClassifiedAdsPresenterProtocol: AnyObject {
     func attach(view: ClassifiedAdsViewProtocol)
+    func didSelectCategory(_ category: Category)
+    func resetCategory()
 }
 
 final class ClassifiedAdsPresenter {
@@ -64,6 +66,7 @@ final class ClassifiedAdsPresenter {
     private func updateDataSource() {
         listing.sort(by: { $0.creationDate > $1.creationDate })
         listing.sort(by: { $0.isUrgent && !$1.isUrgent })
+
         view?.updateDataSource(with: listing, categories: categories, animatingDifferences: false)
     }
 }
@@ -73,5 +76,14 @@ final class ClassifiedAdsPresenter {
 extension ClassifiedAdsPresenter: ClassifiedAdsPresenterProtocol {
     func attach(view: ClassifiedAdsViewProtocol) {
         self.view = view
+    }
+
+    func didSelectCategory(_ category: Category) {
+        let filteredListing = listing.filter({ $0.categoryID == category.id })
+        view?.updateDataSource(with: filteredListing, categories: categories, animatingDifferences: true)
+    }
+
+    func resetCategory() {
+        view?.updateDataSource(with: listing, categories: categories, animatingDifferences: true)
     }
 }
