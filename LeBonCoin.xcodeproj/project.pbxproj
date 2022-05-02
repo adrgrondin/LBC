@@ -37,6 +37,10 @@
 		04B7B39D281C2F470080AABD /* UIImageView+ImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B39C281C2F470080AABD /* UIImageView+ImageLoading.swift */; };
 		04B7B3A0281D7F1F0080AABD /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7B39F281D7F1F0080AABD /* TagView.swift */; };
 		04DCD249281F2FAB00684519 /* Double+CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD248281F2FAB00684519 /* Double+CurrencyFormatter.swift */; };
+		04DCD24B2820162F00684519 /* ClassifiedAdsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD24A2820162F00684519 /* ClassifiedAdsPresenterTests.swift */; };
+		04DCD24D2820170A00684519 /* FetchServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD24C2820170A00684519 /* FetchServiceMock.swift */; };
+		04DCD24F282018BA00684519 /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 04DCD24E282018BA00684519 /* Categories.json */; };
+		04DCD25128201BE100684519 /* ClassifiedAdsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD25028201BE100684519 /* ClassifiedAdsViewMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		04B7B39C281C2F470080AABD /* UIImageView+ImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoading.swift"; sourceTree = "<group>"; };
 		04B7B39F281D7F1F0080AABD /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		04DCD248281F2FAB00684519 /* Double+CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+CurrencyFormatter.swift"; sourceTree = "<group>"; };
+		04DCD24A2820162F00684519 /* ClassifiedAdsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsPresenterTests.swift; sourceTree = "<group>"; };
+		04DCD24C2820170A00684519 /* FetchServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchServiceMock.swift; sourceTree = "<group>"; };
+		04DCD24E282018BA00684519 /* Categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Categories.json; sourceTree = "<group>"; };
+		04DCD25028201BE100684519 /* ClassifiedAdsViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsViewMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +254,7 @@
 		04B7B380281ABD590080AABD /* LeBonCoinTests */ = {
 			isa = PBXGroup;
 			children = (
+				04DCD2522820545200684519 /* ClassifiedAdsTests */,
 				04B7B388281ABF470080AABD /* Mocks */,
 				04B7B381281ABD590080AABD /* LeBonCoinAPIManagerTests.swift */,
 			);
@@ -265,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				04B7B38E281AC54C0080AABD /* Listing.json */,
+				04DCD24E282018BA00684519 /* Categories.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -308,6 +318,16 @@
 				04B7B390281ACF1C0080AABD /* FetchService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		04DCD2522820545200684519 /* ClassifiedAdsTests */ = {
+			isa = PBXGroup;
+			children = (
+				04DCD24A2820162F00684519 /* ClassifiedAdsPresenterTests.swift */,
+				04DCD25028201BE100684519 /* ClassifiedAdsViewMock.swift */,
+				04DCD24C2820170A00684519 /* FetchServiceMock.swift */,
+			);
+			path = ClassifiedAdsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B7B38F281AC54C0080AABD /* Listing.json in Resources */,
+				04DCD24F282018BA00684519 /* Categories.json in Resources */,
 				04B7B34B281968D70080AABD /* LaunchScreen.storyboard in Resources */,
 				04B7B348281968D70080AABD /* Assets.xcassets in Resources */,
 			);
@@ -442,8 +463,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DCD25128201BE100684519 /* ClassifiedAdsViewMock.swift in Sources */,
 				04B7B38A281ABF550080AABD /* APIManagerMock.swift in Sources */,
+				04DCD24D2820170A00684519 /* FetchServiceMock.swift in Sources */,
 				04B7B38C281AC20E0080AABD /* ListingRequestMock.swift in Sources */,
+				04DCD24B2820162F00684519 /* ClassifiedAdsPresenterTests.swift in Sources */,
 				04B7B382281ABD590080AABD /* LeBonCoinAPIManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

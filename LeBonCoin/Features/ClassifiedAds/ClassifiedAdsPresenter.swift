@@ -17,7 +17,7 @@ final class ClassifiedAdsPresenter {
     
     // MARK: Variables
     
-    weak private var view: ClassifiedAdsViewProtocol? {
+    weak private(set) var view: ClassifiedAdsViewProtocol? {
         didSet {
             Task {
                 await fetchCategories()
@@ -31,9 +31,9 @@ final class ClassifiedAdsPresenter {
 
     private let fetchService: ListingFetcher & CategoriesFetcher
     
-    private var listing: Listing = []
+    private(set) var listing: Listing = []
 
-    private var categories: Categories = []
+    private(set) var categories: Categories = []
     
 
     // MARK: Initialization
