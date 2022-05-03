@@ -58,12 +58,17 @@ final class ClassifiedAdsViewController: UIViewController {
 
     // MARK: LifeCycle
 
+    override func loadView() {
+        super.loadView()
+
+        configureCollectionView()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Annonces"
         
-        configureCollectionView()
         configureDataSource()
 
         presenter.attach(view: self)

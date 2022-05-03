@@ -18,8 +18,8 @@ class ClassifiedAdDetailsViewController: UIViewController {
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        //imageView.contentMode = .scaleAspectFill
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
 
         return imageView
     }()
