@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ClassifiedAdsCoordinatorShowDetails: AnyObject {
+    func showDetails(with classifiedAd: ClassifiedAd, categoryName: String)
+}
+
 final class ClassifiedAdsCoordinator: Coordinator {
     weak var parentCoordinator: Coordinator?
 
@@ -24,7 +28,11 @@ final class ClassifiedAdsCoordinator: Coordinator {
         let viewController = ClassifiedAdsViewController(presenter: presenter)
         navigationController.pushViewController(viewController, animated: false)
     }
+}
 
+// MARK: - ClassifiedAdsShowDetailsCoordinator
+
+extension ClassifiedAdsCoordinator: ClassifiedAdsCoordinatorShowDetails {
     func showDetails(with classifiedAd: ClassifiedAd, categoryName: String) {
         let presenter = ClassifiedAdDetailsPresenter(classifiedAd: classifiedAd, categoryName: categoryName)
         presenter.coordinator = self
@@ -32,7 +40,11 @@ final class ClassifiedAdsCoordinator: Coordinator {
         let viewController = ClassifiedAdDetailsViewController(presenter: presenter)
         navigationController.present(viewController, animated: true)
     }
+}
 
+// MARK: - DismissableCoordinator
+
+extension ClassifiedAdsCoordinator: DismissableCoordinator {
     func dismiss() {
         navigationController.dismiss(animated: true)
     }

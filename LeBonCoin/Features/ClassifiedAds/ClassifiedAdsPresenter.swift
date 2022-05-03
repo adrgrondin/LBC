@@ -28,7 +28,7 @@ final class ClassifiedAdsPresenter {
         }
     }
     
-    weak var coordinator: ClassifiedAdsCoordinator?
+    weak var coordinator: ClassifiedAdsCoordinatorShowDetails?
 
     private let fetchService: ListingFetcher & CategoriesFetcher
     

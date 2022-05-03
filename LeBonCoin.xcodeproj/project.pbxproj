@@ -46,6 +46,7 @@
 		04DCD25928215A9300684519 /* Date+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD25828215A9300684519 /* Date+DateFormatter.swift */; };
 		04DCD25E2821844800684519 /* ClassifiedAdDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD25D2821844800684519 /* ClassifiedAdDetailsPresenterTests.swift */; };
 		04DCD2602821862D00684519 /* ClassifiedAdDetailsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD25F2821862D00684519 /* ClassifiedAdDetailsViewMock.swift */; };
+		04DCD2622821925800684519 /* DismissableCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD2612821925800684519 /* DismissableCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		04DCD25828215A9300684519 /* Date+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DateFormatter.swift"; sourceTree = "<group>"; };
 		04DCD25D2821844800684519 /* ClassifiedAdDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsPresenterTests.swift; sourceTree = "<group>"; };
 		04DCD25F2821862D00684519 /* ClassifiedAdDetailsViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsViewMock.swift; sourceTree = "<group>"; };
+		04DCD2612821925800684519 /* DismissableCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,8 +186,8 @@
 		04B7B35528196A1E0080AABD /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				04DCD2532820866D00684519 /* ClassifiedAdDetails */,
 				04B7B35E281973400080AABD /* Coordinators */,
+				04DCD2532820866D00684519 /* ClassifiedAdDetails */,
 				04B7B35928196C050080AABD /* ClassifiedAds */,
 			);
 			path = Features;
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				04B7B35728196B890080AABD /* CoordinatorProtocol.swift */,
+				04DCD2612821925800684519 /* DismissableCoordinator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				04B7B36E2819DCA50080AABD /* APIConstants.swift in Sources */,
 				04B7B391281ACF1C0080AABD /* FetchService.swift in Sources */,
 				04B7B35B28196D2E0080AABD /* ClassifiedAdsViewController.swift in Sources */,
+				04DCD2622821925800684519 /* DismissableCoordinator.swift in Sources */,
 				04B7B36C2819DC5B0080AABD /* NetworkError.swift in Sources */,
 				04B7B39A281AF9690080AABD /* ClassifiedAdContentView.swift in Sources */,
 				04B7B37A2819E60D0080AABD /* CategoriesRequest.swift in Sources */,

@@ -22,7 +22,7 @@ final class ClassifiedAdDetailsPresenter {
         }
     }
 
-    weak var coordinator: ClassifiedAdsCoordinator?
+    weak var coordinator: DismissableCoordinator?
 
     private let classifiedAd: ClassifiedAd
     private let categoryName: String
