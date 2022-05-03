@@ -14,6 +14,10 @@ extension Double {
         formatter.minimumFractionDigits = 0
         formatter.maximumFractionDigits = 2
         formatter.currencyCode = "EUR"
+
+        let fr_FR = Locale(identifier: "fr_FR")
+        formatter.locale = fr_FR
+        
         return formatter
     }()
 

@@ -161,9 +161,10 @@
 		04B7B35228196A0C0080AABD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				04D1475A2821A91C002ECCC7 /* Views */,
+				04B7B35E281973400080AABD /* Coordinators */,
 				04B7B35328196A100080AABD /* Domain */,
 				04B7B35428196A160080AABD /* Data */,
-				04B7B35628196A6B0080AABD /* Protocols */,
 				04B7B39B281C2EE30080AABD /* Extensions */,
 				04DCD2632821966B00684519 /* Enumerations */,
 			);
@@ -189,20 +190,10 @@
 		04B7B35528196A1E0080AABD /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				04B7B35E281973400080AABD /* Coordinators */,
 				04DCD2532820866D00684519 /* ClassifiedAdDetails */,
 				04B7B35928196C050080AABD /* ClassifiedAds */,
 			);
 			path = Features;
-			sourceTree = "<group>";
-		};
-		04B7B35628196A6B0080AABD /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				04B7B35728196B890080AABD /* CoordinatorProtocol.swift */,
-				04DCD2612821925800684519 /* DismissableCoordinator.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		04B7B35928196C050080AABD /* ClassifiedAds */ = {
@@ -214,7 +205,6 @@
 				04B7B392281AD8F00080AABD /* Cells */,
 				04B7B35A28196D2E0080AABD /* ClassifiedAdsViewController.swift */,
 				04B7B35C28196E830080AABD /* ClassifiedAdsPresenter.swift */,
-				04B7B39F281D7F1F0080AABD /* TagView.swift */,
 			);
 			path = ClassifiedAds;
 			sourceTree = "<group>";
@@ -222,6 +212,8 @@
 		04B7B35E281973400080AABD /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				04B7B35728196B890080AABD /* CoordinatorProtocol.swift */,
+				04DCD2612821925800684519 /* DismissableCoordinator.swift */,
 				04B7B35F281973550080AABD /* ClassifiedAdsCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -337,6 +329,14 @@
 				04B7B390281ACF1C0080AABD /* FetchService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		04D1475A2821A91C002ECCC7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04B7B39F281D7F1F0080AABD /* TagView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		04DCD2522820545200684519 /* ClassifiedAdsTests */ = {

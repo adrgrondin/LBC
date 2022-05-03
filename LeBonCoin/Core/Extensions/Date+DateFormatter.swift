@@ -13,6 +13,9 @@ extension Date {
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
 
+        let fr_FR = Locale(identifier: "fr_FR")
+        dateFormatter.locale = fr_FR
+
         return dateFormatter
     }()
 
