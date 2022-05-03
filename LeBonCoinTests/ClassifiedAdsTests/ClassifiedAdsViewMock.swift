@@ -16,4 +16,7 @@ class ClassifiedAdsViewMock: ClassifiedAdsViewProtocol {
         updateDataSourceCalled.toggle()
         self.listing = listing
     }
+
+    func showError(message: String) { }
+
 }

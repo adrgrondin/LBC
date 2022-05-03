@@ -49,8 +49,7 @@ final class ClassifiedAdsPresenter {
         do {
             listing = try await fetchService.fetchListing()
         } catch {
-            // TODO: Handle error
-            print(String(describing: error))
+            await showError(error)
         }
     }
 
@@ -58,8 +57,7 @@ final class ClassifiedAdsPresenter {
         do {
             categories = try await fetchService.fetchCategories()
         } catch {
-            // TODO: Handle error
-            print(String(describing: error))
+            await showError(error)
         }
     }
     
@@ -69,6 +67,11 @@ final class ClassifiedAdsPresenter {
         listing.sort(by: { $0.isUrgent && !$1.isUrgent })
 
         view?.updateDataSource(with: listing, categories: categories, animatingDifferences: false)
+    }
+
+    @MainActor
+    private func showError(_ error: Error) {
+        view?.showError(message: error.localizedDescription)
     }
 }
 

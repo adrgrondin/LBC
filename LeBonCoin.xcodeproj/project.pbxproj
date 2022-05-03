@@ -48,6 +48,7 @@
 		04DCD2602821862D00684519 /* ClassifiedAdDetailsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD25F2821862D00684519 /* ClassifiedAdDetailsViewMock.swift */; };
 		04DCD2622821925800684519 /* DismissableCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD2612821925800684519 /* DismissableCoordinator.swift */; };
 		04DCD2652821967F00684519 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD2642821967F00684519 /* Colors.swift */; };
+		04FD5C232821C42D001173D4 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5C222821C42D001173D4 /* AlertHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		04DCD25F2821862D00684519 /* ClassifiedAdDetailsViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsViewMock.swift; sourceTree = "<group>"; };
 		04DCD2612821925800684519 /* DismissableCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableCoordinator.swift; sourceTree = "<group>"; };
 		04DCD2642821967F00684519 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		04FD5C222821C42D001173D4 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				04B7B35428196A160080AABD /* Data */,
 				04B7B39B281C2EE30080AABD /* Extensions */,
 				04DCD2632821966B00684519 /* Enumerations */,
+				04FD5C212821C41D001173D4 /* Utils */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -375,6 +378,14 @@
 			path = Enumerations;
 			sourceTree = "<group>";
 		};
+		04FD5C212821C41D001173D4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				04FD5C222821C42D001173D4 /* AlertHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -495,6 +506,7 @@
 				04B7B35D28196E830080AABD /* ClassifiedAdsPresenter.swift in Sources */,
 				04B7B36E2819DCA50080AABD /* APIConstants.swift in Sources */,
 				04B7B391281ACF1C0080AABD /* FetchService.swift in Sources */,
+				04FD5C232821C42D001173D4 /* AlertHelper.swift in Sources */,
 				04B7B35B28196D2E0080AABD /* ClassifiedAdsViewController.swift in Sources */,
 				04DCD2622821925800684519 /* DismissableCoordinator.swift in Sources */,
 				04DCD2652821967F00684519 /* Colors.swift in Sources */,

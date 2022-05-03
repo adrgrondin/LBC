@@ -9,6 +9,7 @@ import UIKit
 
 protocol ClassifiedAdsViewProtocol: AnyObject {
     func updateDataSource(with listing: Listing, categories: Categories, animatingDifferences: Bool)
+    func showError(message: String)
 }
 
 final class ClassifiedAdsViewController: UIViewController {
@@ -165,6 +166,12 @@ extension ClassifiedAdsViewController: ClassifiedAdsViewProtocol {
 
         configureMenu()
         applySnapshot(animatingDifferences: animatingDifferences)
+    }
+
+    func showError(message: String) {
+        let alert = AlertHelper.showError(message: message)
+
+        present(alert, animated: true)
     }
 }
 
