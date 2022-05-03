@@ -10,11 +10,22 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        setupNavigationBarAppearance()
+        
         return true
+    }
+
+    private func setupNavigationBarAppearance() {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = Colors.orange
+        appearance.shadowColor = Colors.clear
+        appearance.titleTextAttributes = [.foregroundColor: Colors.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: Colors.white]
+
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = UINavigationBar.appearance().standardAppearance
+        UINavigationBar.appearance().tintColor = Colors.white
     }
 
     // MARK: UISceneSession Lifecycle

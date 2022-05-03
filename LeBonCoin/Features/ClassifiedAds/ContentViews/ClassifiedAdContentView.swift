@@ -49,7 +49,7 @@ final class ClassifiedAdContentView: UIView, UIContentView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 13)
-        label.textColor = .darkGray
+        label.textColor = Colors.darkGray
 
         return label
     }()
@@ -57,7 +57,7 @@ final class ClassifiedAdContentView: UIView, UIContentView {
     private let isUrgentTag: TagView = {
         let tagView = TagView()
         tagView.text = "Urgent"
-        tagView.color = .orange
+        tagView.color = Colors.orange
         tagView.translatesAutoresizingMaskIntoConstraints = false
 
         return tagView

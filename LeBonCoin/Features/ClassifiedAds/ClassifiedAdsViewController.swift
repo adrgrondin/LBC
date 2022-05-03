@@ -61,6 +61,8 @@ final class ClassifiedAdsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Annonces"
+        
         configureCollectionView()
         configureDataSource()
 
@@ -89,7 +91,7 @@ final class ClassifiedAdsViewController: UIViewController {
     private func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCollectionViewLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        collectionView.backgroundColor = .systemBackground
+        collectionView.backgroundColor = Colors.white
         collectionView.delegate = self
         view.addSubview(collectionView)
     }

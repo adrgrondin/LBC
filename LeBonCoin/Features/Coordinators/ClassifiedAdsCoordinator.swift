@@ -24,7 +24,9 @@ final class ClassifiedAdsCoordinator: Coordinator {
     func start() {
         let presenter = ClassifiedAdsPresenter(fetchService: FetchService(apiManager: APIManager()))
         presenter.coordinator = self
-        
+
+        navigationController.navigationBar.prefersLargeTitles = true
+
         let viewController = ClassifiedAdsViewController(presenter: presenter)
         navigationController.pushViewController(viewController, animated: false)
     }

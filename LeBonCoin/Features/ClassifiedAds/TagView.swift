@@ -24,7 +24,7 @@ final class TagView: UIView {
     private let label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
+        label.textColor = Colors.white
 
         return label
     }()

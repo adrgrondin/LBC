@@ -47,6 +47,7 @@
 		04DCD25E2821844800684519 /* ClassifiedAdDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD25D2821844800684519 /* ClassifiedAdDetailsPresenterTests.swift */; };
 		04DCD2602821862D00684519 /* ClassifiedAdDetailsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD25F2821862D00684519 /* ClassifiedAdDetailsViewMock.swift */; };
 		04DCD2622821925800684519 /* DismissableCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD2612821925800684519 /* DismissableCoordinator.swift */; };
+		04DCD2652821967F00684519 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD2642821967F00684519 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		04DCD25D2821844800684519 /* ClassifiedAdDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsPresenterTests.swift; sourceTree = "<group>"; };
 		04DCD25F2821862D00684519 /* ClassifiedAdDetailsViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsViewMock.swift; sourceTree = "<group>"; };
 		04DCD2612821925800684519 /* DismissableCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableCoordinator.swift; sourceTree = "<group>"; };
+		04DCD2642821967F00684519 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				04B7B35428196A160080AABD /* Data */,
 				04B7B35628196A6B0080AABD /* Protocols */,
 				04B7B39B281C2EE30080AABD /* Extensions */,
+				04DCD2632821966B00684519 /* Enumerations */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -364,6 +367,14 @@
 			path = ClassifiedAdDetails;
 			sourceTree = "<group>";
 		};
+		04DCD2632821966B00684519 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				04DCD2642821967F00684519 /* Colors.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -486,6 +497,7 @@
 				04B7B391281ACF1C0080AABD /* FetchService.swift in Sources */,
 				04B7B35B28196D2E0080AABD /* ClassifiedAdsViewController.swift in Sources */,
 				04DCD2622821925800684519 /* DismissableCoordinator.swift in Sources */,
+				04DCD2652821967F00684519 /* Colors.swift in Sources */,
 				04B7B36C2819DC5B0080AABD /* NetworkError.swift in Sources */,
 				04B7B39A281AF9690080AABD /* ClassifiedAdContentView.swift in Sources */,
 				04B7B37A2819E60D0080AABD /* CategoriesRequest.swift in Sources */,
@@ -662,6 +674,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -690,6 +703,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -712,6 +726,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7Q79JZTPP9;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adriengrondin.LeBonCoinTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -730,6 +745,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7Q79JZTPP9;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adriengrondin.LeBonCoinTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

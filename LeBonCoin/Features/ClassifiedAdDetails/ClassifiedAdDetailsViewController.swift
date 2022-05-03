@@ -60,7 +60,7 @@ class ClassifiedAdDetailsViewController: UIViewController {
     private let dateLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .systemGray
+        label.textColor = Colors.grayLight
         label.font = .systemFont(ofSize: 12)
 
         return label
@@ -79,7 +79,7 @@ class ClassifiedAdDetailsViewController: UIViewController {
         let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.font = .systemFont(ofSize: 15)
-        textView.backgroundColor = .systemGray6
+        textView.backgroundColor = Colors.graySuperLight
         textView.layer.cornerRadius = 5
         textView.isEditable = false
 
@@ -97,7 +97,7 @@ class ClassifiedAdDetailsViewController: UIViewController {
     private let isUrgentTag: TagView = {
         let tagView = TagView()
         tagView.text = "Urgent"
-        tagView.color = .orange
+        tagView.color = Colors.orange
         tagView.translatesAutoresizingMaskIntoConstraints = false
 
         return tagView
@@ -128,7 +128,7 @@ class ClassifiedAdDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        view.backgroundColor = Colors.white
 
         closeButton.addTarget(self, action: #selector(didTapCloseButton), for: .touchUpInside)
 
