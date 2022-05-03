@@ -85,7 +85,7 @@ final class ClassifiedAdContentView: UIView, UIContentView {
             imageView.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor, constant: 5),
             imageView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor, constant: 5),
             imageView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -5),
-            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: 0.80)
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1.2)
         ])
 
         NSLayoutConstraint.activate([

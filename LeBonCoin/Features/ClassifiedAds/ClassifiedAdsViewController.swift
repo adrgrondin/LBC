@@ -164,6 +164,13 @@ extension ClassifiedAdsViewController: ClassifiedAdsViewProtocol {
 // MARK: - UICollectionViewDelegate
 
 extension ClassifiedAdsViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) { }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let classifiedAd = dataSource.itemIdentifier(for: indexPath),
+        let categoryName = getCategoryName(for: classifiedAd.categoryID)else {
+            return
+        }
+
+        presenter.showDetails(with: classifiedAd, categoryName: categoryName)
+    }
 }
 

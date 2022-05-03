@@ -8,7 +8,7 @@
 import Foundation
 
 extension Double {
-    private static var currencyFormatter: NumberFormatter = {
+    private static let currencyFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.minimumFractionDigits = 0

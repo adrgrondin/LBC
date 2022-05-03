@@ -11,6 +11,7 @@ protocol ClassifiedAdsPresenterProtocol: AnyObject {
     func attach(view: ClassifiedAdsViewProtocol)
     func didSelectCategory(_ category: Category)
     func resetCategory()
+    func showDetails(with classifiedAd: ClassifiedAd, categoryName: String)
 }
 
 final class ClassifiedAdsPresenter {
@@ -85,5 +86,9 @@ extension ClassifiedAdsPresenter: ClassifiedAdsPresenterProtocol {
 
     func resetCategory() {
         view?.updateDataSource(with: listing, categories: categories, animatingDifferences: true)
+    }
+
+    func showDetails(with classifiedAd: ClassifiedAd, categoryName: String) {
+        coordinator?.showDetails(with: classifiedAd, categoryName: categoryName)
     }
 }

@@ -41,6 +41,9 @@
 		04DCD24D2820170A00684519 /* FetchServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD24C2820170A00684519 /* FetchServiceMock.swift */; };
 		04DCD24F282018BA00684519 /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 04DCD24E282018BA00684519 /* Categories.json */; };
 		04DCD25128201BE100684519 /* ClassifiedAdsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD25028201BE100684519 /* ClassifiedAdsViewMock.swift */; };
+		04DCD2552820868E00684519 /* ClassifiedAdDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD2542820868E00684519 /* ClassifiedAdDetailsViewController.swift */; };
+		04DCD2572820871B00684519 /* ClassifiedAdDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD2562820871B00684519 /* ClassifiedAdDetailsPresenter.swift */; };
+		04DCD25928215A9300684519 /* Date+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD25828215A9300684519 /* Date+DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		04DCD24C2820170A00684519 /* FetchServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchServiceMock.swift; sourceTree = "<group>"; };
 		04DCD24E282018BA00684519 /* Categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Categories.json; sourceTree = "<group>"; };
 		04DCD25028201BE100684519 /* ClassifiedAdsViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsViewMock.swift; sourceTree = "<group>"; };
+		04DCD2542820868E00684519 /* ClassifiedAdDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsViewController.swift; sourceTree = "<group>"; };
+		04DCD2562820871B00684519 /* ClassifiedAdDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsPresenter.swift; sourceTree = "<group>"; };
+		04DCD25828215A9300684519 /* Date+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DateFormatter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +180,7 @@
 		04B7B35528196A1E0080AABD /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				04DCD2532820866D00684519 /* ClassifiedAdDetails */,
 				04B7B35E281973400080AABD /* Coordinators */,
 				04B7B35928196C050080AABD /* ClassifiedAds */,
 			);
@@ -308,6 +315,7 @@
 			children = (
 				04B7B39C281C2F470080AABD /* UIImageView+ImageLoading.swift */,
 				04DCD248281F2FAB00684519 /* Double+CurrencyFormatter.swift */,
+				04DCD25828215A9300684519 /* Date+DateFormatter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -328,6 +336,15 @@
 				04DCD24C2820170A00684519 /* FetchServiceMock.swift */,
 			);
 			path = ClassifiedAdsTests;
+			sourceTree = "<group>";
+		};
+		04DCD2532820866D00684519 /* ClassifiedAdDetails */ = {
+			isa = PBXGroup;
+			children = (
+				04DCD2542820868E00684519 /* ClassifiedAdDetailsViewController.swift */,
+				04DCD2562820871B00684519 /* ClassifiedAdDetailsPresenter.swift */,
+			);
+			path = ClassifiedAdDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +460,7 @@
 				04B7B3A0281D7F1F0080AABD /* TagView.swift in Sources */,
 				04B7B3752819DE760080AABD /* URLSession+Async.swift in Sources */,
 				04B7B367281982860080AABD /* Category.swift in Sources */,
+				04DCD2572820871B00684519 /* ClassifiedAdDetailsPresenter.swift in Sources */,
 				04B7B394281ADD6A0080AABD /* ClassifiedAdCell.swift in Sources */,
 				04B7B360281973550080AABD /* ClassifiedAdsCoordinator.swift in Sources */,
 				04B7B397281ADDDE0080AABD /* ClassifiedAdContentConfiguration.swift in Sources */,
@@ -454,8 +472,10 @@
 				04B7B39A281AF9690080AABD /* ClassifiedAdContentView.swift in Sources */,
 				04B7B37A2819E60D0080AABD /* CategoriesRequest.swift in Sources */,
 				04B7B36A2819DBC30080AABD /* RequestProtocol.swift in Sources */,
+				04DCD25928215A9300684519 /* Date+DateFormatter.swift in Sources */,
 				04DCD249281F2FAB00684519 /* Double+CurrencyFormatter.swift in Sources */,
 				04B7B39D281C2F470080AABD /* UIImageView+ImageLoading.swift in Sources */,
+				04DCD2552820868E00684519 /* ClassifiedAdDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
