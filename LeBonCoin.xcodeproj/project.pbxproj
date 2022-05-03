@@ -44,6 +44,8 @@
 		04DCD2552820868E00684519 /* ClassifiedAdDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD2542820868E00684519 /* ClassifiedAdDetailsViewController.swift */; };
 		04DCD2572820871B00684519 /* ClassifiedAdDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD2562820871B00684519 /* ClassifiedAdDetailsPresenter.swift */; };
 		04DCD25928215A9300684519 /* Date+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD25828215A9300684519 /* Date+DateFormatter.swift */; };
+		04DCD25E2821844800684519 /* ClassifiedAdDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD25D2821844800684519 /* ClassifiedAdDetailsPresenterTests.swift */; };
+		04DCD2602821862D00684519 /* ClassifiedAdDetailsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD25F2821862D00684519 /* ClassifiedAdDetailsViewMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		04DCD2542820868E00684519 /* ClassifiedAdDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsViewController.swift; sourceTree = "<group>"; };
 		04DCD2562820871B00684519 /* ClassifiedAdDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsPresenter.swift; sourceTree = "<group>"; };
 		04DCD25828215A9300684519 /* Date+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DateFormatter.swift"; sourceTree = "<group>"; };
+		04DCD25D2821844800684519 /* ClassifiedAdDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsPresenterTests.swift; sourceTree = "<group>"; };
+		04DCD25F2821862D00684519 /* ClassifiedAdDetailsViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailsViewMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +265,7 @@
 		04B7B380281ABD590080AABD /* LeBonCoinTests */ = {
 			isa = PBXGroup;
 			children = (
+				04DCD25C282183DC00684519 /* ClassifiedAdDetails */,
 				04DCD2522820545200684519 /* ClassifiedAdsTests */,
 				04B7B388281ABF470080AABD /* Mocks */,
 				04B7B381281ABD590080AABD /* LeBonCoinAPIManagerTests.swift */,
@@ -343,6 +348,15 @@
 			children = (
 				04DCD2542820868E00684519 /* ClassifiedAdDetailsViewController.swift */,
 				04DCD2562820871B00684519 /* ClassifiedAdDetailsPresenter.swift */,
+			);
+			path = ClassifiedAdDetails;
+			sourceTree = "<group>";
+		};
+		04DCD25C282183DC00684519 /* ClassifiedAdDetails */ = {
+			isa = PBXGroup;
+			children = (
+				04DCD25D2821844800684519 /* ClassifiedAdDetailsPresenterTests.swift */,
+				04DCD25F2821862D00684519 /* ClassifiedAdDetailsViewMock.swift */,
 			);
 			path = ClassifiedAdDetails;
 			sourceTree = "<group>";
@@ -483,6 +497,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DCD25E2821844800684519 /* ClassifiedAdDetailsPresenterTests.swift in Sources */,
+				04DCD2602821862D00684519 /* ClassifiedAdDetailsViewMock.swift in Sources */,
 				04DCD25128201BE100684519 /* ClassifiedAdsViewMock.swift in Sources */,
 				04B7B38A281ABF550080AABD /* APIManagerMock.swift in Sources */,
 				04DCD24D2820170A00684519 /* FetchServiceMock.swift in Sources */,

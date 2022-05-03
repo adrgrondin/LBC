@@ -75,12 +75,21 @@ class ClassifiedAdDetailsViewController: UIViewController {
         return label
     }()
 
-    private let descriptionLabel: UITextView = {
-        let label = UITextView()
+    private let descriptionTextView: UITextView = {
+        let textView = UITextView()
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.font = .systemFont(ofSize: 15)
+        textView.backgroundColor = .systemGray6
+        textView.layer.cornerRadius = 5
+        textView.isEditable = false
+
+        return textView
+    }()
+
+    private let siretLabel: UILabel = {
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 15)
-        label.backgroundColor = .systemGray6
-        label.layer.cornerRadius = 5
+        label.font = .systemFont(ofSize: 13)
 
         return label
     }()
@@ -137,7 +146,8 @@ class ClassifiedAdDetailsViewController: UIViewController {
         view.addSubview(categoryLabel)
         view.addSubview(dateLabel)
         view.addSubview(descriptionTitleLabel)
-        view.addSubview(descriptionLabel)
+        view.addSubview(descriptionTextView)
+        view.addSubview(siretLabel)
 
         let safeArea = view.safeAreaLayoutGuide
 
@@ -191,10 +201,16 @@ class ClassifiedAdDetailsViewController: UIViewController {
         ])
 
         NSLayoutConstraint.activate([
-            descriptionLabel.topAnchor.constraint(equalTo: descriptionTitleLabel.bottomAnchor, constant: 3),
-            descriptionLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
-            descriptionLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16),
-            descriptionLabel.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -16)
+            descriptionTextView.topAnchor.constraint(equalTo: descriptionTitleLabel.bottomAnchor, constant: 3),
+            descriptionTextView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
+            descriptionTextView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16)
+        ])
+
+        NSLayoutConstraint.activate([
+            siretLabel.topAnchor.constraint(equalTo: descriptionTextView.bottomAnchor, constant: 5),
+            siretLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
+            siretLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16),
+            siretLabel.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -8)
         ])
     }
 
@@ -210,14 +226,18 @@ class ClassifiedAdDetailsViewController: UIViewController {
 extension ClassifiedAdDetailsViewController: ClassifiedAdDetailsViewProtocol {
     func setClassifiedAd(_ classifiedAd: ClassifiedAd, categoryName: String) {
         if let url = URL(string: classifiedAd.imagesURL.thumb ?? "") {
-            imageView.load(url: url)
+            imageView.load(url: url, placeholder: UIImage(named: "placeholder"))
         }
 
         titleLabel.text = classifiedAd.title
         priceLabel.text = classifiedAd.price.formattedCurrency
         categoryLabel.text = categoryName
-        descriptionLabel.text = classifiedAd.listingDescription
+        descriptionTextView.text = classifiedAd.listingDescription
         isUrgentTag.isHidden = !classifiedAd.isUrgent
         dateLabel.text = classifiedAd.creationDate.formattedDate
+
+        if let siret = classifiedAd.siret {
+            siretLabel.text = "SIRET: \(siret)"
+        }
     }
 }
