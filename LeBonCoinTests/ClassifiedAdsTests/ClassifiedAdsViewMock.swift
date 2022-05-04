@@ -18,5 +18,6 @@ class ClassifiedAdsViewMock: ClassifiedAdsViewProtocol {
     }
 
     func showError(message: String) { }
-
+    func showLoading() {}
+    func hideLoading() {}
 }

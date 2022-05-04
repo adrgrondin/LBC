@@ -10,6 +10,8 @@ import UIKit
 protocol ClassifiedAdsViewProtocol: AnyObject {
     func updateDataSource(with listing: Listing, categories: Categories, animatingDifferences: Bool)
     func showError(message: String)
+    func showLoading()
+    func hideLoading()
 }
 
 final class ClassifiedAdsViewController: UIViewController {
@@ -20,30 +22,21 @@ final class ClassifiedAdsViewController: UIViewController {
 
     // MARK: Variables
 
-    private var presenter: ClassifiedAdsPresenterProtocol!
+    private var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        return activityIndicator
+    }()
 
     private var collectionView: UICollectionView! = nil
+
+    private var presenter: ClassifiedAdsPresenterProtocol!
 
     private var dataSource: UICollectionViewDiffableDataSource<Section, ClassifiedAd>! = nil
 
     private var listing: Listing = []
 
     private var categories: Categories = []
-
-    var menuItems: [UIAction] {
-        return [
-            UIAction(title: "Standard item", image: UIImage(systemName: "checkmark"), handler: { (_) in
-            }),
-            UIAction(title: "Disabled item", image: UIImage(systemName: "moon"), attributes: .disabled, handler: { (_) in
-            }),
-            UIAction(title: "Delete..", image: UIImage(systemName: "trash"), attributes: .destructive, handler: { (_) in
-            })
-        ]
-    }
-
-    var demoMenu: UIMenu {
-        return UIMenu(title: "Categories", image: nil, identifier: nil, options: [], children: menuItems)
-    }
 
     // MARK: Initialization
 
@@ -62,20 +55,40 @@ final class ClassifiedAdsViewController: UIViewController {
     override func loadView() {
         super.loadView()
 
-        configureCollectionView()
+        setupActivityIndicatorView()
+        setupCollectionView()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Annonces"
-        
+        view.backgroundColor = Colors.white
+
         configureDataSource()
 
         presenter.attach(view: self)
     }
 
     // MARK: Functions
+
+    private func setupActivityIndicatorView() {
+        view.addSubview(activityIndicator)
+
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
+
+    private func setupCollectionView() {
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCollectionViewLayout())
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectionView.backgroundColor = Colors.white
+        collectionView.delegate = self
+
+        view.addSubview(collectionView)
+    }
 
     func createCollectionViewLayout() -> UICollectionViewLayout {
         let estimatedHeight = CGFloat(300)
@@ -92,14 +105,6 @@ final class ClassifiedAdsViewController: UIViewController {
 
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
-    }
-
-    private func configureCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCollectionViewLayout())
-        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        collectionView.backgroundColor = Colors.white
-        collectionView.delegate = self
-        view.addSubview(collectionView)
     }
 
     private func configureDataSource() {
@@ -119,7 +124,7 @@ final class ClassifiedAdsViewController: UIViewController {
         applySnapshot(animatingDifferences: false)
     }
 
-    private func configureMenu() {
+    private func updateCategoriesMenu() {
         var actions: [UIAction] = []
 
         for category in categories {
@@ -158,13 +163,13 @@ final class ClassifiedAdsViewController: UIViewController {
 }
 
 // MARK: - ClassifiedAdsPresenterProtocol
-
 extension ClassifiedAdsViewController: ClassifiedAdsViewProtocol {
+
     func updateDataSource(with listing: Listing, categories: Categories, animatingDifferences: Bool) {
         self.categories = categories
         self.listing = listing
 
-        configureMenu()
+        updateCategoriesMenu()
         applySnapshot(animatingDifferences: animatingDifferences)
     }
 
@@ -172,6 +177,18 @@ extension ClassifiedAdsViewController: ClassifiedAdsViewProtocol {
         let alert = AlertHelper.showError(message: message)
 
         present(alert, animated: true)
+    }
+
+    func showLoading() {
+        activityIndicator.startAnimating()
+        collectionView.isHidden = true
+        activityIndicator.isHidden = false
+    }
+
+    func hideLoading() {
+        collectionView.isHidden = false
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
     }
 }
 

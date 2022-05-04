@@ -21,9 +21,11 @@ final class ClassifiedAdsPresenter {
     weak private(set) var view: ClassifiedAdsViewProtocol? {
         didSet {
             Task {
+                await showLoading()
                 await fetchCategories()
                 await fetchListing()
                 await updateDataSource()
+                await hideLoading()
             }
         }
     }
@@ -72,6 +74,16 @@ final class ClassifiedAdsPresenter {
     @MainActor
     private func showError(_ error: Error) {
         view?.showError(message: error.localizedDescription)
+    }
+
+    @MainActor
+    private func showLoading() {
+        view?.showLoading()
+    }
+
+    @MainActor
+    private func hideLoading() {
+        view?.hideLoading()
     }
 }
 
