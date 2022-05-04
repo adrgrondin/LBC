@@ -117,11 +117,7 @@ final class ClassifiedAdContentView: UIView, UIContentView {
         guard appliedConfiguration != configuration else { return }
         appliedConfiguration = configuration
 
-        if let imageUrl = configuration.imageUrl,
-           let url = URL(string: imageUrl) {
-            imageView.load(url: url, placeholder: UIImage(named: "placeholder"))
-        }
-
+        imageView.image = configuration.image ?? UIImage(named: "loading")
         titleLabel.text = configuration.title
         priceLabel.text = configuration.price?.formattedCurrency
         categoryLabel.text = configuration.category

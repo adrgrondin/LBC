@@ -49,6 +49,7 @@
 		04DCD2622821925800684519 /* DismissableCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD2612821925800684519 /* DismissableCoordinator.swift */; };
 		04DCD2652821967F00684519 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD2642821967F00684519 /* Colors.swift */; };
 		04FD5C232821C42D001173D4 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5C222821C42D001173D4 /* AlertHelper.swift */; };
+		04FD5C252822D49E001173D4 /* ReusableCellImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5C242822D49E001173D4 /* ReusableCellImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		04DCD2612821925800684519 /* DismissableCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableCoordinator.swift; sourceTree = "<group>"; };
 		04DCD2642821967F00684519 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		04FD5C222821C42D001173D4 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		04FD5C242822D49E001173D4 /* ReusableCellImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCellImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				04FD5C222821C42D001173D4 /* AlertHelper.swift */,
+				04FD5C242822D49E001173D4 /* ReusableCellImageService.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 			files = (
 				04B7B33F281968D60080AABD /* AppDelegate.swift in Sources */,
 				04B7B363281981550080AABD /* ClassifiedAd.swift in Sources */,
+				04FD5C252822D49E001173D4 /* ReusableCellImageService.swift in Sources */,
 				04B7B3782819E1850080AABD /* ListingRequest.swift in Sources */,
 				04B7B3702819DD1B0080AABD /* RequestType.swift in Sources */,
 				04B7B35828196B890080AABD /* CoordinatorProtocol.swift in Sources */,

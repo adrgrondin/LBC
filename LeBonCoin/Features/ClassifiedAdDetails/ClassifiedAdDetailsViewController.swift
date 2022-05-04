@@ -225,8 +225,11 @@ class ClassifiedAdDetailsViewController: UIViewController {
 
 extension ClassifiedAdDetailsViewController: ClassifiedAdDetailsViewProtocol {
     func setClassifiedAd(_ classifiedAd: ClassifiedAd, categoryName: String) {
-        if let url = URL(string: classifiedAd.imagesURL.thumb ?? "") {
+        if let imageUrl = classifiedAd.imagesURL.thumb,
+           let url = URL(string: imageUrl) {
             imageView.load(url: url, placeholder: UIImage(named: "placeholder"))
+        } else {
+            imageView.image = UIImage(named: "placeholder")
         }
 
         titleLabel.text = classifiedAd.title
